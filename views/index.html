@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>清爽小说-首页</title>
+    <link rel="stylesheet" href="/mui/css/mui.min.css">
+
+</head>
+<body>
+<header class="mui-bar mui-bar-nav">
+    <h1 class="mui-title">全部小说列表</h1>
+    <!--<a><img src="../public/images/timg.jpg"> <h1>搜索</h1></a>-->
+</header>
+<div class="mui-content">
+    <ul class="mui-table-view">
+        <a>总小说数：  <%=novels.length%></a>
+        <%for(var i=0;i<novels.length;i++){%>
+        <li class="mui-table-view-cell">
+            <a href="novel/<%=novels[i].index%>" class="mui-navigate-right">
+                <%=novels[i].name%>
+                <a><p style="float: left;margin-lerf:200px">作者： <%=novels[i].author%>&nbsp;&nbsp;  最新章节： <%=novels[i].lastSectionName%></p> </a>
+
+            </a>
+        </li>
+        <%}%>
+    </ul>
+</div>
+<script src="/mui/js/mui.min.js"></script>
+</body>
+</html>
