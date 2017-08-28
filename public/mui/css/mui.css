@@ -1905,7 +1905,7 @@ input[type='submit']:enabled:active, input[type='submit'].mui-active:enabled,
 
     overflow: hidden;
 
-    margin: 10px;
+    /*margin: 10px;*/
 
     border-radius: 2px;
     background-color: white;
