@@ -11,11 +11,15 @@
     <script src="mui/js/index.js"></script>
 </head>
 <body>
-<header class="mui-bar mui-bar-nav">
-    <h1 class="mui-title">全部小说列表</h1>
+<header class="mui-bar mui-bar-nav" style="height: 60px">
+    <div>
+        <h1 class="mui-title" style="margin-right: auto">全部小说列表</h1>
+        <div class="mui-card " style="float:right;width: 250px;margin-right: 10%;background-color:#dddddd">
+            <input type="search" id="search" placeholder="输入小说名字" class="mui-input-clear mui-indexed-list-search-input" style="width:70%;height:30px;"/><input type="button" id="searchButton" value="搜索" style="height:30px;margin-left:5px;margin-top: 5px"/>
+        </div>
+    </div>
 </header>
-<div style="float: right;margin-top:23px;width:200px;margin-right: 850px;"><input type="text" id="search"  style="width: 70%;height:30px;margin-top: 5px"/><button id="searchButton"  style="height:30px;margin-top: 5px" >搜索</button></div>
-<div class="mui-content" style="margin-top: 18px">
+<div class="mui-content" style="margin-top: 10px">
     <ul class="mui-table-view">
         <a>总小说数：  <%=novels.length%></a>
         <%for(var i=0;i< novels.length;i++){%>
