@@ -16,10 +16,16 @@
 </header>
 <div class="mui-content">
     <ul class="mui-table-view">
+    <!--<a><img src="../public/images/timg.jpg"> <h1>搜索</h1></a>-->
+</header>
+<div class="mui-content">
+    <ul class="mui-table-view">
+        <a>总小说数：  <%=novels.length%></a>
         <%for(var i=0;i<novels.length;i++){%>
         <li class="mui-table-view-cell">
             <a href="novel/<%=novels[i].index%>" class="mui-navigate-right">
                 <%=novels[i].name%>
+                <a><p style="float: left;margin-lerf:200px">作者： <%=novels[i].author%>&nbsp;&nbsp;  最新章节： <%=novels[i].lastSectionName%></p> </a>
             </a>
         </li>
         <%}%>
