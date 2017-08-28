@@ -7,28 +7,26 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <title>清爽小说-首页</title>
     <link rel="stylesheet" href="/mui/css/mui.min.css">
-
+    <script src="mui/js/jquery-1.8.0.min.js"></script>
+    <script src="mui/js/index.js"></script>
 </head>
 <body>
 <header class="mui-bar mui-bar-nav">
     <h1 class="mui-title">全部小说列表</h1>
-    <div style="float:"right"><input type="text" id="search" value="测试"/><button id="searchButton" >搜索</button></div>
 </header>
-<div class="mui-content">
-    <ul class="mui-table-view">
-    <!--<a><img src="../public/images/timg.jpg"> <h1>搜索</h1></a>-->
-</header>
-<div class="mui-content">
+<div style="float: right;margin-top:23px;width:200px;margin-right: 850px;"><input type="text" id="search"  style="width: 70%;height:30px;margin-top: 5px"/><button id="searchButton"  style="height:30px;margin-top: 5px" >搜索</button></div>
+<div class="mui-content" style="margin-top: 18px">
     <ul class="mui-table-view">
         <a>总小说数：  <%=novels.length%></a>
-        <%for(var i=0;i<novels.length;i++){%>
+        <%for(var i=0;i< novels.length;i++){%>
+        <% if(novels[i].name!=null&&novels[i].author!=null){%>
         <li class="mui-table-view-cell">
             <a href="novel/<%=novels[i].index%>" class="mui-navigate-right">
                 <%=novels[i].name%>
                 <a><p style="float: left;margin-lerf:200px">作者： <%=novels[i].author%>&nbsp;&nbsp;  最新章节： <%=novels[i].lastSectionName%></p> </a>
             </a>
         </li>
-        <%}%>
+        <%}}%>
     </ul>
 </div>
 <script src="/mui/js/mui.min.js"></script>
