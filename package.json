@@ -13,6 +13,6 @@
     "express": "*",
     "iconv-lite": "*",
     "serve-favicon": "*",
-    "compression": "*"
+    "compression":"*"
   }
 }

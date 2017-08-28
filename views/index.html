@@ -12,6 +12,10 @@
 <body>
 <header class="mui-bar mui-bar-nav">
     <h1 class="mui-title">全部小说列表</h1>
+    <a ><input id="search"/><button id="searchButton" >搜索</button></a>
+</header>
+<div class="mui-content">
+    <ul class="mui-table-view">
     <!--<a><img src="../public/images/timg.jpg"> <h1>搜索</h1></a>-->
 </header>
 <div class="mui-content">
@@ -22,7 +26,6 @@
             <a href="novel/<%=novels[i].index%>" class="mui-navigate-right">
                 <%=novels[i].name%>
                 <a><p style="float: left;margin-lerf:200px">作者： <%=novels[i].author%>&nbsp;&nbsp;  最新章节： <%=novels[i].lastSectionName%></p> </a>
-
             </a>
         </li>
         <%}%>
