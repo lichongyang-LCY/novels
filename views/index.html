@@ -15,7 +15,7 @@
     <div>
         <h1 class="mui-title" style="margin-right: auto">全部小说列表</h1>
         <div class="mui-card " style="float:right;width: 250px;margin-right: 10%;background-color:#dddddd">
-            <input type="search" id="search" placeholder="输入小说名字" class="mui-input-clear mui-indexed-list-search-input" style="width:70%;height:30px;"/><input type="button" id="searchButton" value="搜索" style="height:30px;margin-left:5px;margin-top: 5px"/>
+            <input type="search" id="search" placeholder="输入小说名字" value="" class="mui-input-clear mui-indexed-list-search-input" style="width:70%;height:30px;"/><input type="button" id="searchButton" value="搜索" style="height:30px;margin-left:5px;margin-top: 5px"/>
         </div>
     </div>
 </header>
@@ -23,15 +23,17 @@
     <ul class="mui-table-view">
         <a>总小说数：  <%=novels.length%></a>
         <%for(var i=0;i< novels.length;i++){%>
-        <% if(novels[i].name!=null&&novels[i].author!=null){%>
+        <% if(novels[i].name!=null&&novels[i].author!=null){
+        %>
         <li class="mui-table-view-cell">
             <a href="novel/<%=novels[i].index%>" class="mui-navigate-right">
                 <%=novels[i].name%>
-                <a><p style="float: left;margin-lerf:200px">作者： <%=novels[i].author%>&nbsp;&nbsp;  最新章节： <%=novels[i].lastSectionName%></p> </a>
+                <a><p style="float: left;margin-lerf:200px">作者： <%=novels[i].author%>&nbsp;&nbsp;  最新章节： <%=novels[i].lastSectionName%></p></a>
             </a>
         </li>
         <%}}%>
     </ul>
+    <input type="hidden" id="novelsList" value="<%=novels%>" />
 </div>
 <script src="/mui/js/mui.min.js"></script>
 </body>
