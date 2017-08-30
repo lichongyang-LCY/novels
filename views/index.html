@@ -19,6 +19,7 @@
         </div>
     </div>
 </header>
+<input type="hidden" id="novelsList" value="<%=JSON.stringify(novels)%>" />
 <div class="mui-content" style="margin-top: 10px">
     <ul class="mui-table-view">
         <a>总小说数：  <%=novels.length%></a>
@@ -33,7 +34,6 @@
         </li>
         <%}}%>
     </ul>
-    <input type="hidden" id="novelsList" value="<%=novels%>" />
 </div>
 <script src="/mui/js/mui.min.js"></script>
 </body>
