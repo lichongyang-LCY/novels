@@ -9,7 +9,7 @@ $(document).ready(function() {
         console.log("search:---------"+search);
         console.log("novelsList:---------"+JSON.stringify(newList));
         for (var i=0;i< novelsList.length;i++){
-            // console.log("name:------"+novelsList[i].name);
+            console.log("name:------"+novelsList[i].name);
             // console.log("novelsList aa:---------"+JSON.stringify(novelsList[i]));
             if (novelsList[i].name==search){
                 console.log("success!");
