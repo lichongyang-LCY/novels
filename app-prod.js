@@ -40,7 +40,8 @@ app.set('views',path.join(__dirname , 'views') );
 app.engine('.html', require('ejs').__express);
 app.set('view engine', 'html');
 // novelAI.init();
-// global.novelList=JSON.parse(fs.readFileSync('./novels/list.json'));
+global.novelList=JSON.parse(fs.readFileSync('./novels/list.json'));
+//
 //每隔10分钟循环重新读取小说列表
 // setInterval(()=>{
 //     global.novelList=JSON.parse(fs.readFileSync('./novels/list.json'));
