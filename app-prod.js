@@ -13,7 +13,7 @@ const novelAI=require('./lib/novelAI');
 
 const httpServer = http.createServer(app);
 // const httpsServer = https.createServer(credentials, app);
-const PORT = 8003;
+const PORT = 80;
 // const SSLPORT = 443;
 
 
